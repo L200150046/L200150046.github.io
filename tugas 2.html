@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Tugas 2</title>
+		<meta charset="utf-8" />
+		<style>
+      
+		  #map {
+			height: 470px;
+			width: 100%;
+		  }
+	  </style>
+	</head>
+	<body bgcolor="black" class="landing">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+				<h2><font color="grey"><p>Tugas 2 <br>
+					Sistem Informasi Geografis </p></font></h2>
+				<!-- Banner -->
+				<!-- One -->
+				<!-- Two -->
+						<section class="spotlight">
+							<div class="image">
+								
+								<div id="map"></div>
+								<script>
+								  function initMap() {
+									var map = new google.maps.Map(document.getElementById('map'), {
+									  zoom: 10,
+									  center: {lat: -7.0097774, lng: 109.1121839}
+									});
+									
+									var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
+									
+									var markers = locations.map(function(location, i) {
+									  return new google.maps.Marker({
+										position: location,
+										label: labels[i % labels.length]
+									  });
+									});
+									
+									var markerCluster = new MarkerClusterer(map, markers,
+										{imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+								  }
+								  var locations = [{lat: -7.11137, lng: 109.241449},
+										        {lat: -6.89293, lng: 1109.40497},
+										        {lat: -6.89091, lng: 109.311623},
+										        {lat: -7.10014, lng: 109.249272},
+										        {lat: -7.18706, lng: 109.288100},
+										        {lat: -6.90115, lng: 109.463015},
+										        {lat: -6.99259, lng: 109.422531},
+										        {lat: -6.90424, lng: 109.409913},
+										        {lat: -7.03645, lng: 109.315651},
+										        {lat: -6.86678, lng: 109.473880},
+										        {lat: -6.89694, lng: 109.469705},
+										        {lat: -6.89760, lng: 109.317537},
+										        {lat: -6.90769, lng: 109.312726},
+										        {lat: -6.89465, lng: 109.389867},
+										        {lat: -6.90536, lng: 109.317641},
+										        {lat: -6.89665, lng: 109.317109},
+										        {lat: -6.87994, lng: 109.312285},
+										        {lat: -7.09898, lng: 109.286472},
+										        {lat: -6.89459, lng: 109.317658},
+										        {lat: -6.89521, lng: 109.472801},
+										        {lat: -6.89629, lng: 109.387731},
+										        {lat: -6.91765, lng: 1109.34306},
+										        {lat: -6.90919, lng: 109.335321},
+										        {lat: -6.89251, lng: 109.337182},
+										        {lat: -6.89860, lng: 109.317695},
+										        {lat: -7.07105, lng: 109.315620},
+										        {lat: -6.89844, lng: 109.472598},
+										        {lat: -6.88709, lng: 109.468235},
+										        {lat: -7.03445, lng: 109.308078},
+										        {lat: -6.90749, lng: 109.312383},
+										        {lat: -6.89657, lng: 109.387740},
+										        {lat: -6.90908, lng: 109.334582},
+										        {lat: -7.10003, lng: 109.257313},
+										        {lat: -6.90533, lng: 109.316192}
+        
+								  ]
+								</script>
+								<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+								</script>
+								<script async defer
+								src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcZLghe5U_DAPLV83T0o1f_JX2OA7a1SQ&callback=initMap">
+								</script>
+							</div>
+							<div class="content">
+								<h2><font color="grey">Marker Cluster<br/></font>
+								</h2>
+								<h3><font color="grey"><p>"SLTP dan SLTA Kabupaten Pemalang"</p></font></h3>
+							</div>
+						</section>
+					</section>
+	</body>
+</html>
